@@ -1,0 +1,22 @@
+package Marksheet;
+
+public class TestMarksheetModel {
+public static void main(String[] args) throws Exception {
+	Testadd();
+}
+
+public static void Testadd() throws Exception {
+	
+	MarkSheetBean bean  =  new MarkSheetBean();
+	bean.setId(1);
+	bean.setRollno("rays101");
+	bean.setfName("Nitesh");
+	bean.setlName("vishwakarma");
+	bean.setPhy(88);
+	bean.setCham(67);
+	bean.setMath(89);
+	
+	MarksheetModel model = new MarksheetModel();
+	model.add(bean);
+}
+}

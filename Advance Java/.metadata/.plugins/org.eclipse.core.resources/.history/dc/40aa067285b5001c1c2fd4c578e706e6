@@ -1,0 +1,13 @@
+package Marksheet;
+
+public class MarkSheetBean {
+private int id ;
+private String rollno;
+private String fName;
+private String lName; 
+private int phy;
+private int cham;
+private int math;
+
+ 
+}

@@ -1,0 +1,16 @@
+package Marksheet;
+
+public class TestMarksheetModel {
+public static void main(String[] args) throws Exception {
+	Testadd();
+}
+
+public static void Testadd() throws Exception {
+	
+	MarkSheetBean bean  =  new MarkSheetBean();
+	bean.setId(1);
+	
+	MarksheetModel model = new MarksheetModel();
+	model.add(bean);
+}
+}

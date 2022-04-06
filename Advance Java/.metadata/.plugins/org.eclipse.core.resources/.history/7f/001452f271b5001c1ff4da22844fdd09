@@ -1,0 +1,33 @@
+package ConeectJDBC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class TestPSInsertAdd {
+  public static void main(String[] args) throws Exception {
+	  tsetUpdate();
+}
+
+public static void tsetUpdate() throws Exception {
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+	
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/raystech","root","ROOT");
+int id=12;
+String Fname = "Dheeraj";
+String Lname = "kumrawat";
+int salary = 40000;
+int dep_id = 3;
+
+PreparedStatement ps =  conn.prepareStatement("?,?,?,?,?");
+String s = "insert into employee values("+id+",'"+Fname+",'"+Lname+"',"+salary+","+dep_id+")"; 
+
+int rs = ps.executeUpdate(s);
+
+System.out.println(rs+"Insert");
+
+  ps.close();
+  conn.close();
+}	
+}
